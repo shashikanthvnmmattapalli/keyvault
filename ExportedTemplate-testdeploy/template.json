@@ -1,0 +1,78 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vaults_testkeyvaultwe_name": {
+            "defaultValue": "testkeyvaultwe",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/bcfc295b-672b-4a87-88a1-c49a2055aaed/resourceGroups/testdeploy/providers/Microsoft.KeyVault/vaults/testkeyvaultwe'.",
+            "type": "Microsoft.KeyVault/vaults",
+            "name": "[parameters('vaults_testkeyvaultwe_name')]",
+            "apiVersion": "2016-10-01",
+            "location": "eastus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "sku": {
+                    "family": "A",
+                    "name": "Standard"
+                },
+                "tenantId": "de08c407-19b9-427d-9fe8-edf254300ca7",
+                "accessPolicies": [
+                    {
+                        "tenantId": "de08c407-19b9-427d-9fe8-edf254300ca7",
+                        "objectId": "a77ce3ff-59da-48c7-9e69-f9a7b9a22677",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers"
+                            ]
+                        }
+                    }
+                ],
+                "enabledForDeployment": false,
+                "enabledForDiskEncryption": false,
+                "enabledForTemplateDeployment": true
+            },
+            "dependsOn": []
+        }
+    ]
+}
